@@ -45,6 +45,13 @@ var OnDemandClient = (function () {
         return _checkParamsAndFetch(requestData, options, callback);
     };
 
+    Constr.prototype.getSectors = function (options, callback) {
+        var requestData = {
+            url: _baseUrl + '/getSectors.' + _format()
+        };
+        return _checkParamsAndFetch(requestData, options, callback);
+    };
+
     Constr.prototype.getTechnicals = function (options, callback) {
         var requestData = {
             url: _baseUrl + '/getTechnicals.' + _format()
